@@ -1,0 +1,21 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color bounding_box_color
+color gray
+color orange
+color white
+drawable rn_edit_text_material
+id camera_container
+id inferenceTime
+id isGpu
+id overlay
+id view_finder
+integer react_native_dev_server_port
+integer react_native_inspector_proxy_port
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string gpu
+style AppTheme
