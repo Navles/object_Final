@@ -17,6 +17,7 @@ import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
+import com.sample.HelloModule
 
 class Detector(
     private val context: Context,
@@ -172,12 +173,18 @@ class Detector(
                         cnf = maxConf, cls = maxIdx, clsName = clsName
                     )
                 )
+                sendData()
             }
         }
 
         if (boundingBoxes.isEmpty()) return null
 
         return applyNMS(boundingBoxes)
+    }
+
+    fun sendData() {
+      val module = HelloModule.instance
+        module.triggerEvent("check")
     }
 
     private fun applyNMS(boxes: List<BoundingBox>) : MutableList<BoundingBox> {

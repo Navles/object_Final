@@ -22,4 +22,5 @@ public class HelloPackage implements ReactPackage {
         modules.add(new HelloModule(reactContext));
         return modules;
     }
+
 }
